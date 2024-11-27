@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ACADEMICO_ISTLC.Modelo;
 
-
+namespace ACADEMICO_ISTLC.Controlador.Datos
+{
     public class EstudianteDataAccess
     {
         public List<Estudiante> getEstudiante()
