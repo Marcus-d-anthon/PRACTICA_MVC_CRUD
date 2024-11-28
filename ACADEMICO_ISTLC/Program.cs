@@ -1,3 +1,5 @@
+using ACADEMICO_ISTLC.Vista;
+
 namespace ACADEMICO_ISTLC
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace ACADEMICO_ISTLC
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new frmEstudiante());
         }
     }
 }

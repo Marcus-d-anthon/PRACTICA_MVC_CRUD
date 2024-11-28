@@ -31,10 +31,10 @@
             panel1 = new Panel();
             grdEstudiantes = new DataGridView();
             panel2 = new Panel();
-            btnSalir = new Button();
-            btnEliminar = new Button();
-            btnModificar = new Button();
             btnNuevo = new Button();
+            btnModificar = new Button();
+            btnEliminar = new Button();
+            btnSalir = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grdEstudiantes).BeginInit();
             panel2.SuspendLayout();
@@ -51,10 +51,18 @@
             // 
             // grdEstudiantes
             // 
+            grdEstudiantes.AllowUserToAddRows = false;
+            grdEstudiantes.AllowUserToDeleteRows = false;
+            grdEstudiantes.AllowUserToResizeColumns = false;
+            grdEstudiantes.AllowUserToResizeRows = false;
+            grdEstudiantes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            grdEstudiantes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             grdEstudiantes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grdEstudiantes.Dock = DockStyle.Fill;
             grdEstudiantes.Location = new Point(0, 0);
             grdEstudiantes.Name = "grdEstudiantes";
+            grdEstudiantes.ReadOnly = true;
+            grdEstudiantes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             grdEstudiantes.Size = new Size(657, 218);
             grdEstudiantes.TabIndex = 0;
             // 
@@ -70,25 +78,16 @@
             panel2.Size = new Size(657, 45);
             panel2.TabIndex = 1;
             // 
-            // btnSalir
+            // btnNuevo
             // 
-            btnSalir.Dock = DockStyle.Right;
-            btnSalir.Location = new Point(557, 0);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(100, 45);
-            btnSalir.TabIndex = 0;
-            btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            btnEliminar.Dock = DockStyle.Right;
-            btnEliminar.Location = new Point(457, 0);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(100, 45);
-            btnEliminar.TabIndex = 1;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnNuevo.Dock = DockStyle.Right;
+            btnNuevo.Location = new Point(257, 0);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(100, 45);
+            btnNuevo.TabIndex = 3;
+            btnNuevo.Text = "Nuevo";
+            btnNuevo.UseVisualStyleBackColor = true;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnModificar
             // 
@@ -100,15 +99,26 @@
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             // 
-            // btnNuevo
+            // btnEliminar
             // 
-            btnNuevo.Dock = DockStyle.Right;
-            btnNuevo.Location = new Point(257, 0);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(100, 45);
-            btnNuevo.TabIndex = 3;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.UseVisualStyleBackColor = true;
+            btnEliminar.Dock = DockStyle.Right;
+            btnEliminar.Location = new Point(457, 0);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(100, 45);
+            btnEliminar.TabIndex = 1;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            btnSalir.Dock = DockStyle.Right;
+            btnSalir.Location = new Point(557, 0);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(100, 45);
+            btnSalir.TabIndex = 0;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // frmEstudiante
             // 
@@ -122,6 +132,7 @@
             Name = "frmEstudiante";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmEstudiante";
+            Load += frmEstudiante_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)grdEstudiantes).EndInit();
             panel2.ResumeLayout(false);
