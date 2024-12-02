@@ -42,7 +42,7 @@
             textBox5 = new TextBox();
             label2 = new Label();
             btnSalir = new Button();
-            btnIngresar = new Button();
+            btnGrabar = new Button();
             label8 = new Label();
             comboBox1 = new ComboBox();
             SuspendLayout();
@@ -167,16 +167,17 @@
             btnSalir.TabIndex = 14;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
-            // btnIngresar
+            // btnGrabar
             // 
-            btnIngresar.Font = new Font("Segoe UI", 11.25F);
-            btnIngresar.Location = new Point(115, 375);
-            btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(94, 28);
-            btnIngresar.TabIndex = 15;
-            btnIngresar.Text = "Ingresar";
-            btnIngresar.UseVisualStyleBackColor = true;
+            btnGrabar.Font = new Font("Segoe UI", 11.25F);
+            btnGrabar.Location = new Point(115, 375);
+            btnGrabar.Name = "btnGrabar";
+            btnGrabar.Size = new Size(94, 28);
+            btnGrabar.TabIndex = 15;
+            btnGrabar.Text = "Grabar";
+            btnGrabar.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -203,7 +204,7 @@
             ClientSize = new Size(467, 428);
             Controls.Add(comboBox1);
             Controls.Add(label8);
-            Controls.Add(btnIngresar);
+            Controls.Add(btnGrabar);
             Controls.Add(btnSalir);
             Controls.Add(textBox5);
             Controls.Add(dateTimePicker1);
@@ -240,7 +241,7 @@
         private TextBox textBox5;
         private Label label2;
         private Button btnSalir;
-        private Button btnIngresar;
+        private Button btnGrabar;
         private Label label8;
         private ComboBox comboBox1;
     }
